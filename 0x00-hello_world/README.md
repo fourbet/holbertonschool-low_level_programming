@@ -1,0 +1,1 @@
+This project is about Hello world in C
