@@ -10,11 +10,17 @@
  */
 int main(void)
 {
-char letter;
-letter = 'z';
-while (letter >= 'a')
-{putchar(letter);
-letter--;
+int i;
+int j;
+i = 0;
+j = 49;
+while (i < 10)
+{putchar((i % 100) + '0');
+i++;
+}
+while (j < 55)
+{putchar((j % 100) + '0');
+j++;
 }
 putchar('\n');
 return (0);
