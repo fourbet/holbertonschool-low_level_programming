@@ -6,22 +6,22 @@
 /**
  * main -print alphabet lower then upercase
  *
- * Result: 0
+ * Return: 0
  */
 int main(void)
 {
-  char letter;
-  char letter2;
-  letter = 'a';
-  letter2 = 'A';
-  while (letter <= 'z')
-    { putchar(letter);
-      letter++;
-    }
-  while (letter2 <= 'Z')
-    { putchar(letter2);
-      letter2++;
-    }
-  putchar('\n');
- return (0);
+char letter;
+char letter2;
+letter = 'a';
+letter2 = 'A';
+while (letter <= 'z')
+{ putchar(letter);
+letter++;
+}
+while (letter2 <= 'Z')
+{ putchar(letter2);
+letter2++;
+}
+putchar('\n');
+return (0);
 }
