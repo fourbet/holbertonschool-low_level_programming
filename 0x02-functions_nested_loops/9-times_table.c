@@ -27,7 +27,7 @@ void times_table(void)
 			{
 				_putchar(k);
 			}
-			else
+			else if (k == 48 && j != 0)
 			{
 				_putchar(' ');
 			}
