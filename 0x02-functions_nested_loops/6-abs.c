@@ -9,12 +9,12 @@
 int _abs(int n)
 {
 	int l;
-	
+
 	if (n < 0)
 	{
-		l = - n;
+		l = -n;
 	}
-	else if (n ==0)
+	else if (n == 0)
 		l = 0;
 	else
 		l = n;
