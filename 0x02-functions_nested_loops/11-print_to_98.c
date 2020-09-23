@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * print_to_98 - prints all natural numbers
  * @n: int
@@ -11,30 +11,20 @@
 
 void print_to_98(int n)
 {
-	int k;
-	int m;
-	
-	while (n <= 98)
+	while (n < 98)
 	{
-		k = (n % 10) + '0';
-		m = (n /10) + '0';
-		_putchar(m);
-		_putchar(k);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d, ", n);
 		n++;
       
 	}
 	while (n > 98)
 	{
-		k = (n % 10) + '0';
-		m = (n / 10) + '0';
-		_putchar(m);
-		_putchar(k);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d, ", n);
 		n--;
 	}
-
-	_putchar('\n');
+	if (n == 98)
+	{
+		printf("%d", n);
+	}
+	printf("\n");
 }
