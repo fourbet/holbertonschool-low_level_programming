@@ -1,0 +1,13 @@
+#include "holberton.h"
+
+/**
+ * mul - multiples two interger
+ * @a: Int a
+ * @b: Int b
+ * Return: result (Success)
+ */
+
+int mul(int a, int b)
+{
+	return (a * b);
+}
