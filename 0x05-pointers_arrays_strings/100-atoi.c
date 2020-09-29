@@ -7,8 +7,7 @@
 
 int _atoi(char *s)
 {
-	unsigned int l = 0;
-	int res = 0;
+	int l = 0;
 	int i = 0;
 	char a;
 	int sign = 1;
@@ -34,6 +33,5 @@ int _atoi(char *s)
 	}
 	if (countNeg > countPos)
 		sign = -1;
-	res = l;
-	return (sign * res);
+	return (sign * l);
 }
