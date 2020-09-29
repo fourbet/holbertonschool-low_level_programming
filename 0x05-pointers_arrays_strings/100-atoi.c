@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int l = 0;
 	int i = 0;
 	char a;
-/*	int sign = 1;*/
+	int sign = 1;
 	int countNum = 0;
 	int countNeg = 0;
 	int countPos = 0;
@@ -30,9 +30,12 @@ int _atoi(char *s)
 			countPos++;
 		if (a == 45 && countNum == 0)/* - */
 			countNeg++;
+		if (countNeg > countPos)
+		{
+			sign = -1;
+			l = -l;
+		}
 		i++;
 	}
-	if (countNeg > countPos)
-		l = -l;
 	return (l);
 }
