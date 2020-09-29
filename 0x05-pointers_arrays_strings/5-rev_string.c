@@ -24,7 +24,7 @@ void rev_string(char *s)
 		tmp= s[j];
 		s[j] = s[i];
 		printf(" Value of tmp, s[j] ,j ,i : %c, %d, %d, %d \n",tmp, s[j], j, i);
-		*(s+(i-j)) = tmp;
+		*(s+i) = tmp;
 		j++;
 		i--;
 	}
