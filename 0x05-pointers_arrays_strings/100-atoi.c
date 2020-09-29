@@ -31,10 +31,7 @@ int _atoi(char *s)
 		if (a == 45 && countNum == 0)/* - */
 			countNeg++;
 		if (countNeg > countPos)
-		{
 			sign = -1;
-			l = -l;
-		}
 		i++;
 	}
 	return (l);
