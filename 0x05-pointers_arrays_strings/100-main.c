@@ -32,7 +32,7 @@ int main(void)
 	printf("%d\n", n);
 	n=_atoi("-2147483648");
 	printf("%d\n", n);
-	n=_atoi("--+-sq8kj");
+	n=_atoi("-j");
 	printf("%d\n", n);
 return (0);
 }
