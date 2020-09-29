@@ -9,6 +9,7 @@ int _atoi(char *s)
 {
 	int l = 0;
 	int i = 0;
+	int res = 0;
 	char a;
 	int sign = 1;
 	int countNum = 0;
@@ -16,7 +17,8 @@ int _atoi(char *s)
 	int countPos = 0;
 
 	while (s[i] != '\0')
-	{a = s[i];
+	{
+		a = s[i];
 		if (a >= 48 && a <= 57)/* 0 to 9*/
 			if (i == countNum + 1 || countNum == 0)
 			{
@@ -33,5 +35,6 @@ int _atoi(char *s)
 	}
 	if (countNeg > countPos)
 		sign = -1;
-	return (sign * l);
+	res = l;
+	return (sign * res);
 }
