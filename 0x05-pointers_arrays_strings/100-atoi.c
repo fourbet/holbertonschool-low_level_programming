@@ -33,7 +33,6 @@ int _atoi(char *s)
 		i++;
 	}
 	if (countNeg > countPos)
-		sign = -1;
-	l = sign * l;
+		l = -l;
 	return (l);
 }
