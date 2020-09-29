@@ -26,9 +26,9 @@ int _atoi(char *s)
 					countNum = i;
 				}
 			}
-		if (a == 43)/* + */
+		if (a == 43 && countNum == 0)/* + */
 			countPos++;
-		if (a == 45)/* - */
+		if (a == 45 && countNum == 0)/* - */
 			countNeg++;
 		i++;
 	}
