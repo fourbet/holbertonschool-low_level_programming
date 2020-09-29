@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int l = 0;
 	int i = 0;
 	char a;
-	int sign = 1;
+/*	int sign = 1;*/
 	int countNum = 0;
 	int countNeg = 0;
 	int countPos = 0;
