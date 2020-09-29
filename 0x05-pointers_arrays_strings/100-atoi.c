@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * _atoi - convert a string to an integer
  * @s: pointer to a char
@@ -18,14 +17,12 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		a = s[i];
-		printf(" a : %c\n", a);
-		if (a >= 48 && a <= 57)/* 0 to 9*/
+	  a = s[i];
+	  if (a >= 48 && a <= 57)/* 0 to 9*/
 		  if ( i == countNum + 1 || countNum == 0)
 		    {
 		      {
 			l = l * 10 + a - '0';
-			printf("l : %d\n", l);
 			countNum = i;
 		      }
 		    }
@@ -37,6 +34,5 @@ int _atoi(char *s)
 	}
 	if (countNeg > countPos)
 	  sign = -1;
-	printf(" res : %d\n", sign*l);
 	return (sign*l);
 }
