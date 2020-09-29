@@ -17,22 +17,22 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-	  a = s[i];
-	  if (a >= 48 && a <= 57)/* 0 to 9*/
-		  if ( i == countNum + 1 || countNum == 0)
-		    {
-		      {
-			l = l * 10 + a - '0';
-			countNum = i;
-		      }
-		    }
+		a = s[i];
+		if (a >= 48 && a <= 57)/* 0 to 9*/
+			if (i == countNum + 1 || countNum == 0)
+			{
+				{
+					l = l * 10 + a - '0';
+					countNum = i;
+				}
+			}
 		if (a == 43)/* + */
-		  countPos++;
-		i++;
+			countPos++;
 		if (a == 45)/* - */
-		  countNeg++;
+			countNeg++;
+		i++;
 	}
 	if (countNeg > countPos)
-	  sign = -1;
-	return (sign*l);
+		sign = -1;
+	return (sign * l);
 }
