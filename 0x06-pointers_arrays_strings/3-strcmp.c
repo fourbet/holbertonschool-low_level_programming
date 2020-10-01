@@ -10,7 +10,6 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
-	int count = 0;
 	unsigned char a = '0';
 	unsigned char b = '0';
 
@@ -19,10 +18,16 @@ int _strcmp(char *s1, char *s2)
 		a = s1[i];
 		b = s2[i];
 		if (a < b)
-			count--;
+		{
+			return (a - b);
+			break;
+		}
 		else if (a > b)
-			count++;
+		{
+			return (a + b);
+			break;
+		}
 		i++;
 	}
-	return (count);
+	return (0);
 }
