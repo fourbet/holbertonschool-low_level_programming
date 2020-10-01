@@ -24,7 +24,7 @@ int _strcmp(char *s1, char *s2)
 		}
 		else if (a > b)
 		{
-			return (a + b);
+			return (a - b);
 			break;
 		}
 		i++;
