@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  * cap_string - changes all lowercase letters of a string to uppercase.
  * @s: pointer to a char
