@@ -11,6 +11,9 @@ char *cap_string(char *s)
 {
 	int i = 0;
 
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] = s[0] - ' ';
+
 	while (s[i] != '\0')
 	{
 		if (s[i] == ',' || s[i] == ';' || s[i] == '.' || s[i] == ' ' || s[i] == '?'
