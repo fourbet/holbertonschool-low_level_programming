@@ -19,10 +19,10 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		while (accept[k] != '\0')
 		{
-			if (s[i] == accept[k] && (i == count + 1 || count == 0))
+			if (s[i] == accept[k] && i == count + 1)
 			{
 				res++;
-				count++;
+				count = i;
 			}
 			k++;
 		}
