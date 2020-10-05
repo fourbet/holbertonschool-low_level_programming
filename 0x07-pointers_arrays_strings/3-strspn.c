@@ -28,7 +28,7 @@ unsigned int _strspn(char *s, char *accept)
 		k = 0;
 		if (s[i] == ' ')
 		{
-			if ( count > res)
+			if (count > res)
 				res = count;
 			count = 0;
 		}
