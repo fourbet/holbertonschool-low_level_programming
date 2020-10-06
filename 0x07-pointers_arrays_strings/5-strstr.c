@@ -16,10 +16,10 @@ char *_strstr(char *haystack, char *needle)
 	int lenNeedle = 0;
 	int index = 0;
 	int index2 = 0;
-	char *res;
 	int ok = 0;
+
 	if (needle[0] == '\0')
-	    return &haystack[0];
+		return (&haystack[0]);
 	while (haystack[i] != '\0')
 	{
 		while (needle[k] != '\0')
@@ -43,11 +43,9 @@ char *_strstr(char *haystack, char *needle)
 		k = 0;
 		i++;
 	}
-/*	printf("count, lenNeedle : %d , %d\n", count, lenNeedle);*/
 	if (count + 1 == lenNeedle)
 	{
-		res = &haystack[index - lenNeedle + 1];
-		return (res);
+		return (&haystack[index - lenNeedle + 1]);
 	}
 	else
 		return (0);
