@@ -1,7 +1,6 @@
 #include "holberton.h"
-
 /**
- * _memset - copies memory area
+ * _memcpy - copies memory area.
  * @dest: pointer to a char
  * @src: pointer to a char
  * @n: first n bytes
