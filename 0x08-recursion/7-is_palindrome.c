@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
 /**
  * _rev_recursion - prints a string in reverse
  *
@@ -20,6 +18,21 @@ int _rev_recursion(char *s, int start, int end)
 	else
 		return (1);
 }
+/**
+ * _strlen - returns length string
+ *
+ * @s: pointer to a character
+ *
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	int count = 0;
+
+	while (s[count] != '\0')
+		count++;
+	return (count);
+}
 
 /**
  * is_palindrome - eturns 1 if a string is a palindrome and 0 if not
@@ -31,7 +44,7 @@ int _rev_recursion(char *s, int start, int end)
 int is_palindrome(char *s)
 {
 	if (s != '\0')
-		return (_rev_recursion(s, 0, strlen(s) - 1));
+		return (_rev_recursion(s, 0, _strlen(s) - 1));
 	else
 		return (0);
 
