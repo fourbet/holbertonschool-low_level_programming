@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 /**
  * _prime_number - returns 1 if the input integer is a prime number
