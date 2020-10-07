@@ -1,5 +1,22 @@
 #include "holberton.h"
 #include <stdio.h>
+
+/**
+ *_sqrt - returns the natural square root of a number
+ *
+ * @n: int
+ * @k: int
+ * Return: int
+ */
+int _sqrt(int n, int k)
+{
+	if (k * k == n)
+		return (k);
+	if (k * k < n)
+		return (_sqrt(n, k + 1));
+	else
+		return (-1);
+}
 /**
  *_sqrt_recursion - returns the natural square root of a number
  *
@@ -9,15 +26,8 @@
  */
 int _sqrt_recursion(int n)
 {
-	int k = n;
-
-	if (k == 1)
-		return (1);
-	if (k <= 0)
-		return (-1);
-	if (k * 2 == n)
-		return (k);
+	if (n != 0)
+		return (_sqrt(n, 0));
 	else
-		return (_sqrt_recursion(k - 1));
-		       
+		return (0);
 }
