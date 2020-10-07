@@ -28,7 +28,7 @@ int _rev_recursion(char *s, int start, int end)
 int _strlen(char *s, int i)
 {
 	if (s[i] == '\0')
-		return 0;
+		return (0);
 	else
 		return (1 + _strlen(s, i + 1));
 }
