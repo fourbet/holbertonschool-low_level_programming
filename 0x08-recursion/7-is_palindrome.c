@@ -22,16 +22,15 @@ int _rev_recursion(char *s, int start, int end)
  * _strlen - returns length string
  *
  * @s: pointer to a character
- *
+ * @i: int
  * Return: int
  */
-int _strlen(char *s)
+int _strlen(char *s, int i)
 {
-	int count = 0;
-
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	if (s[i] == '\0')
+		return 0;
+	else
+		return (1 + _strlen(s, i + 1));
 }
 
 /**
@@ -44,7 +43,7 @@ int _strlen(char *s)
 int is_palindrome(char *s)
 {
 	if (s != '\0')
-		return (_rev_recursion(s, 0, _strlen(s) - 1));
+		return (_rev_recursion(s, 0, _strlen(s, 0) - 1));
 	else
 		return (0);
 
