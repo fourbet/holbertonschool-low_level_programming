@@ -1,7 +1,7 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 /**
- * main - program which prints number of arguments
+ * main - program which prints all arguments its receives
  *
  * @argc: int, number of arguments
  * @argv: array of pointer to these arguments

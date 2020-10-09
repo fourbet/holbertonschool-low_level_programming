@@ -1,8 +1,8 @@
-BB#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - program which prints number of arguments
+ * main - multiplies two numbers
  *
  * @argc: int, number of arguments
  * @argv: array of pointer to these arguments
