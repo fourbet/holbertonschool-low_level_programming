@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		{
 			sumCheck = sum;
 			sum += atoi(*(argv++));
-			if (sumCheck == sum && count != 0)
+			if (sumCheck == sum && count != 0 && *(argv++) != 0)
 			{
 				printf("Error\n");
 				return (1);
