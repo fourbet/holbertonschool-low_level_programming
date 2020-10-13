@@ -50,7 +50,15 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s2 == NULL)
 	{
-		len2 = 0;
+		len1 = 0;
+		s = malloc(sizeof(char) * (_strlen(s1) + 1));
+		while (s1[i] != '\0')
+		{
+			s[i] = s1[i];
+			i++;
+		}
+		s[i] = '\0';
+		return (s);
 	}
 	else
 	{
