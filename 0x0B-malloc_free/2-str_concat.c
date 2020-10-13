@@ -46,20 +46,20 @@ char *str_concat(char *s1, char *s2)
 		return (s);
 	}
 	else
-		len1 = _strlen(s1) + 1;
+		len1 = _strlen(s1);
 	if (s2 == NULL)
 	{
 		len2 = 0;
 	}
 	else
-		len2 = _strlen(s2) + 1;
-	s = malloc(sizeof(char) * (len1 + len2));
+		len2 = _strlen(s2);
+	s = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (s == NULL)
 		return (NULL);
-	for (i = 0; i < len1 - 1; i++)
+	for (i = 0; i < len1; i++)
 		*(s + i) = *(s1 + i);
 	printf("i :%d\n", i);
-	for (j = i; j < i + len2 - 1 ; j++)
+	for (j = i; j < i + len2; j++)
 	{
 		*(s + j) = *(s2 + k);
 		k++;
