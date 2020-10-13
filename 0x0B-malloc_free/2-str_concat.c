@@ -34,8 +34,6 @@ char *str_concat(char *s1, char *s2)
 	int len1 = 0;
 	int len2 = 0;
 
-	printf("s1 :%d\n", _strlen(s1));
-	printf("s2 :%d\n", _strlen(s2));
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	else if (s1 == NULL)
@@ -64,7 +62,6 @@ char *str_concat(char *s1, char *s2)
 		
 		for (i = 0; i < len1; i++)
 			*(s + i) = *(s1 + i);
-		printf("i :%d\n", i);
 		for (j = i; j < i + len2; j++)
 		{
 			*(s + j) = *(s2 + k);
