@@ -1,4 +1,4 @@
-#include "holberton.h"
+BB#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
 /**
@@ -24,9 +24,9 @@ int **alloc_grid(int width, int height)
 		if (array[i] == NULL)
 			return (NULL);
 	}
-	for(i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
-		for(j = 0; j < width; j++)
+		for (j = 0; j < width; j++)
 			array[i][j] = 0;
 	}
 	return (array);
