@@ -38,29 +38,40 @@ char *str_concat(char *s1, char *s2)
 	printf("s2 :%d\n", _strlen(s2));
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	if (s1 == NULL)
+	else if (s1 == NULL)
 	{
 		len1 = 0;
+		s = malloc(sizeof(char) * (_strlen(s2) + 1));
+		while (s2[i] != '\0')
+		{
+			s[i] = s2[i];
+			i++;
+		}
+		s[i] = '\0';
+		return (s);
 	}
-	else
-		len1 = _strlen(s1);
-	if (s2 == NULL)
+	else if (s2 == NULL)
 	{
 		len2 = 0;
 	}
 	else
-		len2 = _strlen(s2);
-	s = malloc(sizeof(char) * (len1 + len2 + 1));
-	if (s == NULL)
-		return (NULL);
-	for (i = 0; i < len1; i++)
-		*(s + i) = *(s1 + i);
-	printf("i :%d\n", i);
-	for (j = i; j < i + len2; j++)
 	{
-		*(s + j) = *(s2 + k);
-		k++;
+		len1 = _strlen(s1);
+		len2 = _strlen(s2);
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+		if (s == NULL)
+			return (NULL);
+		
+		for (i = 0; i < len1; i++)
+			*(s + i) = *(s1 + i);
+		printf("i :%d\n", i);
+		for (j = i; j < i + len2; j++)
+		{
+			*(s + j) = *(s2 + k);
+			k++;
+		}
+		*(s + j) = '\0';
+		return (s);
 	}
-	*(s + j) = '\0';
-	return (s);
+	return (NULL);
 }
