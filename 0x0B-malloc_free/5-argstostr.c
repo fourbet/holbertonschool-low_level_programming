@@ -28,7 +28,7 @@ int _strlen(char *str)
 char *argstostr(int ac, char **av)
 {
 	char *s = '\0';
-	int len = -6;
+	int len = 0;
 	int stockAc = ac;
 	int i = 0;
 	int j = 0;
@@ -42,17 +42,20 @@ char *argstostr(int ac, char **av)
 		len += _strlen(av[ac]);
 	}
 	printf("total length :%d\n", len);
-	printf(" stockAc : %d\n", ac);
+	printf(" stockAc, ac : %d, %d\n", stockAc, ac);
 	s = malloc(sizeof(char) * (len + stockAc));
 	if (s == NULL)
-		return (NULL);	
-	for (i =0; i < stockAc; i++)
+		return (NULL);
+	for (i = 0; i < stockAc; i++)
 	{
-		for (j = k; j < _strlen(av[stockAc]); j++)
+		for (j = 0; j < _strlen(av[i]); j++)
 		{
-			*(s + k) = av[i];
+			*(s + k) = av[i][j];
 			k++;
+			printf("k :%d\n", k);
 		}
+		*(s + k) = '\n';
+		k++;
 	}
 
 	return (s);
