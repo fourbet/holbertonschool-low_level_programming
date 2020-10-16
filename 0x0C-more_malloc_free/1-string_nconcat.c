@@ -33,6 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	
 	len1 = 0;
 	len2 = 0;
+	k = 0;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
@@ -41,7 +42,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len2 = _strlen(s2);
 	if (n < len2)
 		len2 = n;
-	s = malloc(sizeof(char) * (len1 + n + 1));
+	s = malloc(sizeof(char) * (len1 + len2 + 1));
+	printf(" len1 + len2 + 1 %d\n",len1 + len2 + 1);
 	if (s == NULL)
 		return (NULL);
 	for (i = 0; i < len1; i++)
