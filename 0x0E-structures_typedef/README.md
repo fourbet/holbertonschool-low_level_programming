@@ -1,0 +1,1 @@
+This project os about structures and typedef
