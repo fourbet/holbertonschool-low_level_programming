@@ -23,10 +23,11 @@ int main(int ac, char *av[])
 
 	num1 = atoi(*(av + 1));
 	num2 = atoi(*(av + 3));
-	if (av[2][0] == '/' && num2 == 0)
+	if ((av[2][0] == '/' && num2 == 0)
+	    || (av[2][0] == '%' && num2 == 0))
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 	if (av[2][0] == '+' || av[2][0] == '-' || av[2][0] == '*'
 	     || av[2][0] == '/' || av[2][0] == '%')
@@ -36,5 +37,5 @@ int main(int ac, char *av[])
 		return (0);
 	}
 	printf("Error\n");
-	return (0);
+	exit(99);
 }
