@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * main - main program
  * @ac: int, nbr parameters
@@ -29,8 +29,8 @@ int main(int ac, char *av[])
 		printf("Error\n");
 		exit(100);
 	}
-	if (av[2][0] == '+' || av[2][0] == '-' || av[2][0] == '*'
-	     || av[2][0] == '/' || av[2][0] == '%')
+	if ((strlen(av[2]) == 1) && (av[2][0] == '+' || av[2][0] == '-' || av[2][0] == '*'
+			      || av[2][0] == '/' || av[2][0] == '%'))
 	{
 		res = get_op_func(av[2])(num1, num2);
 		printf("%d\n", res);
