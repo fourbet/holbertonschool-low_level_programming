@@ -29,7 +29,8 @@ int main(int ac, char *av[])
 		printf("Error\n");
 		exit(100);
 	}
-	if ((strlen(av[2]) == 1) && (av[2][0] == '+' || av[2][0] == '-' || av[2][0] == '*'
+	if ((strlen(av[2]) == 1) && (av[2][0] == '+' || av[2][0] == '-'
+				     || av[2][0] == '*'
 			      || av[2][0] == '/' || av[2][0] == '%'))
 	{
 		res = get_op_func(av[2])(num1, num2);
