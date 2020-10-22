@@ -12,6 +12,7 @@
 int main(int ac, char *av[])
 {
 	int number = 0;
+	int num1 = 0;
 
 	if (ac != 2)
 	{
