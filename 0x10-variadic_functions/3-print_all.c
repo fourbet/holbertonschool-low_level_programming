@@ -56,7 +56,7 @@ void print_all(const char *const format, ...)
 	int i = 0;
 	int j = 0;
 	char *separator = ", ";
-	int ignored = 0;
+	int passed = 0;
 
 	format_t print[] = {
 		{'c', print_char},
@@ -75,14 +75,13 @@ void print_all(const char *const format, ...)
 			if (format[i] == print[j].type)
 			{
 				print[j].f(valist);
+				passed = 1;
 			}
-			else
-				ignored++;
 			j++;
 		}
-		if (format[i + 1] != '\0' && ignored != 4)
+		if (format[i + 1] != '\0' && passed)
 			printf("%s", separator);
-		ignored = 0;
+		passed = 0;
 		j = 0;
 		i++;
 	}
