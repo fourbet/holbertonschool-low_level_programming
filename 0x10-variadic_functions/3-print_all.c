@@ -65,10 +65,9 @@ void print_all(const char *const format, ...)
 		{'s', print_string},
 		{'\0', NULL}
 	};
-	
-	va_start(valist, format);
 
-	while (format[i] && format)
+	va_start(valist, format);
+	while (format && format[i])
 	{
 		while (print[j].type != '\0')
 		{
