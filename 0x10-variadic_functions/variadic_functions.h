@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * struct format_s - Struct s
+ * struct format - Struct s
  *
  * @type: char
  * @f: the function associated

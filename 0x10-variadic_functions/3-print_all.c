@@ -2,7 +2,7 @@
 /**
  * print_string - prints string
  *
- * @s: pointer to char
+ * @valist: va_list
  *
  * Return: void
  */
@@ -13,7 +13,7 @@ void print_string(va_list valist)
 /**
  * print_char - prints char
  *
- * @c: char
+ * @valist: va_list
  *
  * Return: void
  */
@@ -24,7 +24,7 @@ void print_char(va_list valist)
 /**
  * print_float - prints float
  *
- * @f: float
+ * @valist: va_list
  *
  * Return: void
  */
@@ -35,7 +35,7 @@ void print_float(va_list valist)
 /**
  * print_int - prints int
  *
- * @i: int
+ * @valist: va_list
  *
  * Return: void
  */
