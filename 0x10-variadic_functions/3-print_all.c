@@ -8,7 +8,12 @@
  */
 void print_string(va_list valist)
 {
-	printf("%s", va_arg(valist, char *));
+	char *s = "(nil)";
+	char *string = va_arg(valist, char *);
+
+	if (string == NULL)
+		string = s;
+	printf("%s", string);
 }
 /**
  * print_char - prints char
@@ -55,8 +60,7 @@ void print_all(const char *const format, ...)
 	va_list valist;
 	int i = 0;
 	int j = 0;
-	char *separator = ", ";
-	int count = 0;
+	char *separator = "";
 
 	format_t print[] = {
 		{'c', print_char},
@@ -73,10 +77,9 @@ void print_all(const char *const format, ...)
 		{
 			if (format[i] == print[j].type)
 			{
-				if (i != 0 && count > 0)
-					printf("%s", separator);
+				printf("%s", separator);
 				print[j].f(valist);
-				count++;
+				separator = ", ";
 		}
 			j++;
 		}
