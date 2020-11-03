@@ -46,5 +46,5 @@ size_t print_listint_safe(const listint_t *head)
 			if (!p && !q)
 				return (count);
 	}
-	exit(98);
+	return (count);
 }
