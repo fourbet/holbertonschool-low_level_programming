@@ -24,14 +24,11 @@ size_t print_listint_safe(const listint_t *head)
 		if (loop == 2 && (p == q))
 		{
 			printf("-> [%p] %d\n\n",(void *) p, p->n);
-			break;
+			return (count);
 		}
 		if ((p == q) && count != 0)
 		{
 			loop = 1;
-		}
-		if (loop == 1)
-		{
 			p = begin;
 			loop = 2;
 		}
@@ -49,5 +46,5 @@ size_t print_listint_safe(const listint_t *head)
 			if (!p && !q)
 				return (count);
 	}
-	return (count);
+	exit(98);
 }
