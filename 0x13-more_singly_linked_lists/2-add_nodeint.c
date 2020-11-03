@@ -6,7 +6,7 @@
  * @head: pointer to a pointer to a listint_h
  * @n: const int
  *
- * Return: size_t
+ * Return: adress of the new node or NULL
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
