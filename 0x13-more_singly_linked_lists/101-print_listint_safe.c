@@ -44,7 +44,7 @@ size_t print_listint_safe(const listint_t *head)
 				}
 			}
 			if (!p && !q)
-				return (count);
+				return (count + 1);
 	}
 	exit(98);
 }
