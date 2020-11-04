@@ -32,7 +32,7 @@ size_t print_listint_safe(const listint_t *head)
 			p = begin;
 			if (p == q)
 			{
-				printf("-> [%p] %d\n\n", (void *) p, p->n);
+				printf("-> [%p] %d\n", (void *) p, p->n);
 				return (count);
 			}
 			loop = 2;
