@@ -21,7 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 	begin = (listint_t *) head;
 	while (head)
 	{
-		if (loop == 2 && (p == q))
+		if (loop == 1 && (p == q))
 		{
 			printf("-> [%p] %d\n", (void *) p, p->n);
 			return (count);
@@ -35,7 +35,6 @@ size_t print_listint_safe(const listint_t *head)
 				printf("-> [%p] %d\n", (void *) p, p->n);
 				return (count);
 			}
-			loop = 2;
 		}
 			count++;
 			printf("[%p] %d\n", (void *) q, q->n);
