@@ -27,7 +27,6 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int res;
 	int i = 0;
-	int iMax = 0;
 
 	if (n == 0)
 	{
@@ -39,12 +38,10 @@ void print_binary(unsigned long int n)
 	{
 		i++;
 	}
-
-	iMax = i;
+	i--;
 	while (i >= 0)
 	{
 		res = n >> i;
-		if (i != iMax && res != 0)
 		{
 			if (res & 1)
 				_putchar('1');
