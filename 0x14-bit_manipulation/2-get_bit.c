@@ -29,10 +29,11 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int res;
 	unsigned int i = 0;
 
-	while (_pow_recursion(2,i) <= n)
+	while (_pow_recursion(2, i) <= n)
 		i++;
+	i--;
 
-	if (index > i)
+	if ((index > i) || (n == 0 && index != 0))
 		return (-1);
 
 	res = n >> index;
@@ -40,5 +41,5 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (res & 1)
 		return (1);
 	else
-		return (0);		
+		return (0);
 }
