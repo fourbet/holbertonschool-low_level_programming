@@ -27,8 +27,16 @@ unsigned long int _pow_recursion(unsigned int x, unsigned int y)
 int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int res;
+	unsigned int i = 0;
+
+	while (_pow_recursion(2,i) <= n)
+		i++;
+
+	if (index > i)
+		return (-1);
 
 	res = n >> index;
+
 	if (res & 1)
 		return (1);
 	else
