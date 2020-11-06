@@ -1,12 +1,13 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <limits.h>
 /**
  * _pow_recursion - number pow
  * @x: number given
  * @y: power
  * Return: number
  */
-unsigned long int _pow_recursion(unsigned int x, unsigned int y)
+unsigned long int _pow_recursion(unsigned long int x, unsigned long int y)
 {
 	if (y > 0)
 	{
@@ -33,8 +34,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 		return;
 	}
-
-	while (_pow_recursion(2, i) <= n)
+	while ((_pow_recursion(2, i)) <= n && (i < 64))
 	{
 		i++;
 	}
