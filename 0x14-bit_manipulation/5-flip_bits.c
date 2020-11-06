@@ -33,6 +33,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	diff = n ^ m;
 	while (_pow_recursion(2, i) <= diff && i < 64)
 		i++;
+	if ((n == 0 && m != 0) || (n != 0 && m == 0))
+		count--;
+
 	while (i >= 0)
 	{
 		if (((n >> i) & 1) != ((m >> i) & 1))
