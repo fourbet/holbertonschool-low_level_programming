@@ -12,7 +12,7 @@ int main(int ac, char **av)
 {
 	int fd_write;
 	int fd_read;
-	ssize_t bytesR = 0, bytesW = 0;
+	ssize_t bytesR = 0;
 	char *buf;
 	int fd_close;
 
@@ -40,8 +40,7 @@ int main(int ac, char **av)
 		return (0);
 	while ((bytesR = read(fd_read, buf, 1024)) > 0)
 	{
-		printf("bytesR: %li\n", bytesR);
-		bytesW = write(fd_write, buf, bytesR);
+	       write(fd_write, buf, bytesR);
 	}
 	if (bytesR == -1)
 	{
