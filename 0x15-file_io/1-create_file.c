@@ -31,7 +31,13 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	if (text_content == NULL)
+	{
 		fd_write = open(filename, O_CREAT);
+		if (fd_write == -1)
+			return (0);
+		else
+			return (1);
+	}
 	fd_write = open(filename, O_TRUNC | O_WRONLY);
 	if (fd_write == -1)
 		fd_write = open(filename, O_CREAT | O_WRONLY, 0600);
