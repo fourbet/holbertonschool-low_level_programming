@@ -53,8 +53,11 @@ int main(int ac, char **av)
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 		return (0);
-	bytesR = read(fd_read, buf, 1024);
-	bytesW = write(fd_write, buf, bytesR);
+	while ((bytesR = read(fd_read, buf, 1024)) > 0)
+	{
+		printf("bytesR: %li\n", bytesR);
+		bytesW = write(fd_write, buf, bytesR);
+	}
 	if (bytesR == -1)
 		return (-1);
 	if (bytesW == -1)
