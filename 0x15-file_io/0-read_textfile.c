@@ -28,7 +28,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	bytes2 = write(STDOUT_FILENO, buf, letters);
 	if (bytes != bytes2)
 	{
-		buf[bytes] = '\0';
 		bytes++;
 	}
 	if (bytes == -1)
