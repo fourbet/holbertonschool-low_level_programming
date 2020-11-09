@@ -44,9 +44,10 @@ int main(int ac, char **av)
 		bytesW = write(fd_write, buf, bytesR);
 	}
 	if (bytesR == -1)
-		return (-1);
-	if (bytesW == -1)
-		return (-1);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+                exit(98);
+	}
 	fd_close = close(fd_read);
 	if (fd_close == -1)
 	{
