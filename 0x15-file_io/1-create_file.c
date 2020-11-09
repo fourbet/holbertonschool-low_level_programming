@@ -42,10 +42,10 @@ int create_file(const char *filename, char *text_content)
 	if (fd_write == -1)
 		fd_write = open(filename, O_CREAT | O_WRONLY, 0600);
 	if (fd_write == -1)
-		return (0);
+		return (-1);
 	bytes = write(fd_write, text_content, _strlen(text_content));
 	if (bytes == -1)
-		return (0);
+		return (-1);
 	close(fd_write);
 	return (1);
 }
