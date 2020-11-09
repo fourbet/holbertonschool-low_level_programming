@@ -25,15 +25,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buf == NULL)
 		return (0);
 	bytes = read(fd_read, buf, letters);
-	bytes2 = write(STDOUT_FILENO, buf, letters);
-	if (bytes != bytes2)
-	{
-		bytes++;
-	}
+	bytes2 = write(STDOUT_FILENO, buf, bytes);
 	if (bytes == -1)
 		return (0);
 	if (bytes2 == -1)
 		return (0);
 	close(fd_read);
-	return (bytes);
+	return (bytes2);
 }
