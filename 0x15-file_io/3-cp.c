@@ -12,7 +12,7 @@ int main(int ac, char **av)
 {
 	int fd_write;
 	int fd_read;
-	ssize_t bytesR = 0;
+	ssize_t bytesR = 0, ssize_t bytesW = 0;
 	char buf[1024];
 	int fd_close;
 
@@ -30,6 +30,8 @@ int main(int ac, char **av)
 		write(fd_write, buf, bytesR);
 	if (bytesR == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+	if (bytesW == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	fd_close = close(fd_read);
 	if (fd_close == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_read), exit(100);
