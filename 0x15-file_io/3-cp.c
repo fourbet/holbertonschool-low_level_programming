@@ -25,7 +25,7 @@ int main(int ac, char **av)
 	if (fd_write == -1)
 		fd_write = open(av[2], O_WRONLY | O_CREAT, 0664);
 	if (fd_write == -1)
-	       dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while ((bytesR = read(fd_read, buf, 1024)) > 0)
 		bytesW = write(fd_write, buf, bytesR);
 	if (bytesR == -1)
