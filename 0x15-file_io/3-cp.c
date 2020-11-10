@@ -12,7 +12,7 @@ int main(int ac, char **av)
 {
 	int fd_write;
 	int fd_read;
-	ssize_t bytesR = 0, ssize_t bytesW = 0;
+	ssize_t bytesR = 0, bytesW = 0;
 	char buf[1024];
 	int fd_close;
 
