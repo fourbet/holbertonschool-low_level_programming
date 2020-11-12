@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int nbr_words(char *str, char *sep)
+{
+        int i = 0, j = 0, count = 0;
+
+        while (str[i] != '\0')
+        {
+                while(sep[j] != '\0')
+                {
+                        if (str[i] == sep[j])
+                                count++;
+                        j++;
+                }
+                j = 0;
+                i++;
+        }
+        return (count + 1);
+}
+
+int _strlen(char *s)
+{
+        int i = 0;
+
+        while (s[i] != '\0')
+                i++;
+        return (i);
+}
+
+char *_getpath(void)
+{
+        extern char **environ;
+        char *env = NULL;
+	char **tab;
+	char *res = NULL;
+	int i = 0;
+	int nbr = 0;
+	int k = 0;
+	int count = 0;
+
+	printf("____________________________\n");
+	while (environ[i] != NULL)
+	{
+		res = strtok(environ[i], "=\n");
+		if ((strcmp(res, "PATH") == 0))
+		{
+			res = strtok(NULL, "=\n");
+			printf("res (env): %s\n", res);			
+			count = nbr_words(res, ":\n");
+			env = strtok(res,":\n");
+			printf("env : %s\n", env);
+			while (k <= count - 1)
+			{
+				env = strtok(NULL, ":");
+				if (env != NULL)
+					printf(" env : %s\n", env);
+				k++;
+			}
+			break;
+		}
+		i++;
+	}
+}
+int main(void)
+{
+	_getpath();
+	return (0);
+}

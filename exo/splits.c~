@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <unistd.h>
+
+/**
+ * main - PID
+ *
+ * Return: Always 0.
+ */
+char *_strtok(char *str, const char *delim)
+{
+	int i = 0;
+	char *res;
+	
+	while (str[i] !='\0')
+	{
+		if (str[i] == delim[0])
+		{
+			return (res);
+		}
+		res[i] = str[i];
+	}
+	return (NULL);
+
+}
