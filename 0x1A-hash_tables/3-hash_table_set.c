@@ -52,9 +52,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht == NULL || strcmp(key, "") == 0)
 		return (0);
 	size = ht->size;
-	printf("size : %lu\n", size);
 	index = key_index((unsigned char *)key, size);
-	printf("index : %lu\n", index);
 	array = ht->array;
 	array[index] = add_node(&array[index], key, value);
 	return (1);
