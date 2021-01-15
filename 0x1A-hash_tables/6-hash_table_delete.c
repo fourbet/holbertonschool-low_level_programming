@@ -12,20 +12,23 @@ void hash_table_delete(hash_table_t *ht)
 	hash_node_t *current;
 	hash_node_t *tmp;
 
-	if (ht)
+	if (ht == NULL)
+		return;
+	array = ht->array;
+	while (count < ht->size)
 	{
-		array = ht->array;
-		while (count < ht->size)
+		current = array[count];
+		while (current != NULL)
 		{
-			current = array[count];
-			while (current != NULL)
-			{
-				tmp = current;
-				current = current->next;
-				free(tmp);
-			}
-			count++;
+			tmp = current;
+			current = current->next;
+			free(tmp->value);
+			free(tmp->key);
+			free(tmp);
 		}
-		free(ht);
+		free(current);
+		count++;
 	}
+	free(array);
+	free(ht);
 }
