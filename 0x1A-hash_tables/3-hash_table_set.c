@@ -19,11 +19,12 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 	current = *head;
 	if (current)
 	{
-		while (current->next != NULL)
+		while (current)
 		{
 			if (strcmp(current->key, key) == 0)
 			{
 				current->value = strdup(value);
+				printf("dup\n");
 				return (current);
 			}
 			current = current->next;
