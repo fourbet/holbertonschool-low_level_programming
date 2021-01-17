@@ -14,20 +14,22 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 	hash_node_t *current = NULL;
 
 	new_node = malloc(sizeof(hash_node_t));
-	if (new_node == NULL)
-		return (NULL);
-	current = *head;
-	if (current)
+	if (new_node == NULL || head == NULL)
 	{
-		while (current)
+		free(new_node);
+		return (NULL);
+	}
+	current = *head;
+	while (current)
+	{
+		if (strcmp(current->key, key) == 0)
 		{
-			if (strcmp(current->key, key) == 0)
-			{
-				current->value = strdup(value);
-				return (current);
-			}
-			current = current->next;
+			free(current->value);
+			free(new_node);
+			current->value = strdup(value);
+			return (current);
 		}
+		current = current->next;
 	}
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
