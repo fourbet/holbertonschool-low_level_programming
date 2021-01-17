@@ -8,7 +8,7 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_node_t **array;
-	unsigned long int count;
+	unsigned long int count = 0;
 	hash_node_t *current;
 	hash_node_t *tmp;
 
