@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
+""" Project Makefile """
 
 def island_perimeter(grid):
+    """ returns the perimeter of the island described in grid"""
     land = 0
     width = []
     height = []
